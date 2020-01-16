@@ -1,13 +1,15 @@
 
-    var food = $("input:radio[name=food]:checked").val();
-      $("#result-button").click(function(){
-        $(document).ready(function(){
-        if (food = "Mexican") {
-           $("#santapic").show();
-        } 
-       
-  event.preventDefault();
-  });   
- });
+$(document).ready(function () {
   
- 
+  $("#result-button").click(function () {
+    var food = $("input:radio[name=food]:checked").val();
+      if (food === "Mexican") {
+      $("#santapic").show();
+    } else {
+      $("#santapic").hide();
+    }
+    event.preventDefault();
+  });
+});
+
+
